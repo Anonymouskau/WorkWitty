@@ -1,0 +1,1 @@
+export  var commonLink2='https://d077-103-57-140-252.ngrok-free.app/whatkit'

@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed for vertical centering */
+    width: 40vh;
+  }
+  
+  .centered {
+    text-align: center;
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    left: 50%;
+    bottom: auto;
+  }
+  
+  /* MyComponent.css */
+
+.table-container {
+    text-align: center;
+  }
+  
+  .center-table {
+    display: inline-block;
+    margin: 20px auto; /* Adjust margin as needed */
+    border-radius: 10px; /* Adjust border radius */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .center-table {
+      margin: 10px auto; /* Adjust margin for smaller screens */
+      overflow-x: auto; /* Enable horizontal scroll on small screens */
+    }
+  
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+  }
+ 
+  
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .small-rows-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .small-rows-table th,
+  .small-rows-table td {
+    padding: 4px; /* Adjust padding for smaller rows */
+    font-size: 12px; /* Adjust font size for smaller rows */
+    border: 1px solid #ccc;
+  }
+   

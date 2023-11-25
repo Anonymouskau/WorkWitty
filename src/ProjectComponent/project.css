@@ -1,0 +1,42 @@
+/* Styles for the card */
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 10%;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: calc(100% - 40px); /* Adjust to fit within the viewport */
+      height: auto;
+      max-width: 300px; /* Example maximum width for responsiveness */
+      margin: 10px; /* Adjust margin for smaller screens */
+    }
+  }
+  
