@@ -50,13 +50,13 @@ export default function Whatsapp() {
           onClick={async () => {
             toast.warning("It Will take 40sec to 1min to assign please Wait");
             await axios
-              .post('http://localhost:5000/task/whatsapp',)
+              .post( common_Link+'/task/whatsapp',)
               .then((resp) => {
                
                setvalue((resp.data.qr))
                setloading((false))
                
-               axios.post('http://localhost:5000/task/whatsappsave',{
+               axios.post(common_Link+'/task/whatsappsave',{
                 message: message,
                 phone_number: phone,
                 hours: currentTime.getHours(),
