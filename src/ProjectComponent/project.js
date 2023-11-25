@@ -8,8 +8,9 @@ import Popup from 'reactjs-popup'
 import CenteredForm from '../Centered/Centered'
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
+import { BeatLoader } from 'react-spinners'
 export default function Project() {
-    
+  var[loading,setloading]=useState(true)
     const navigate=useNavigate()
     const saveProjectName=(Pname)=>{
        localStorage.setItem("projectname",Pname)
@@ -20,6 +21,7 @@ export default function Project() {
   var api=async()=>{await axios.post(common_Link+'/project/myproject',{"email":email}).then((resp)=>{
     if(resp.status==200){
        setvalue(resp.data)
+       setloading((false))
     }
     else{
         alert("Something went wrong")
@@ -49,7 +51,7 @@ useEffect(()=>{
        
       </div>
    
-      {value.map(data_props=>{
+      {loading?<BeatLoader style={{alignContent:"center"}} color='grey'/>:value.map(data_props=>{
         
        return (
             <div class="card">
