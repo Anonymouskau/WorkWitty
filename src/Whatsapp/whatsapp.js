@@ -35,7 +35,7 @@ export default function Whatsapp() {
             setmessage(e.target.value);
           }}
         />
-        <label>Phone number</label>
+        <label>Phone number to assign Task</label>
 
         <PhoneInput
           country={"eg"}
@@ -50,7 +50,7 @@ export default function Whatsapp() {
           onClick={async () => {
             toast.warning("It Will take 40sec to 1min to assign please Wait");
             await axios
-              .post( common_Link+'/task/whatsapp',)
+              .post(common_Link+'/task/whatsapp')
               .then((resp) => {
                
                setvalue((resp.data.qr))
